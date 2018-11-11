@@ -49,7 +49,6 @@ export class ModalComponent implements OnInit {
     };
     if (data.name && data.phone && data.phone.length === 10) {
       data.id = uuid();
-      console.log(data);
       this.formService.sendFormData(data).subscribe(data => {
         this.success = true;
         setTimeout(() => this.exit.emit(), 3000);

@@ -32,7 +32,7 @@ _intervalTime = 3500;
   constructor() {
     this.fixedWidth = window.innerWidth;
     if(this._repeat)
-    this.interval = setInterval(() => { this.ind += 1; console.log(this.ind); }, this._intervalTime);
+    this.interval = setInterval(() => this.ind += 1, this._intervalTime);
   }
 
   ngOnInit() {
