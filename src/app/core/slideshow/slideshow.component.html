@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="wrapper" [ngStyle]="{'width': fixedWidth * _images.length + 'px','transform': 'translateX(-' + (ind % _images.length) * fixedWidth + 'px)'}">
+    <div *ngFor="let item of _images" >
+      <app-quoutes [name]="item.name" [date]="item.date" [comment]="item.comment"></app-quoutes>
+    </div>
+  </div>
+</div>

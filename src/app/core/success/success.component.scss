@@ -1,0 +1,27 @@
+.container{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: #35D4A6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    right: 20%;
+    .success{
+        font-size: 54px;
+    }
+}
+.contact{
+    color: white;
+    position: absolute;
+    bottom: -3rem;
+    font-size: 24px;
+    right: 2rem;
+    text-align: center;
+}
+.thanks{
+    bottom: -6rem;
+    right: 5rem;
+}

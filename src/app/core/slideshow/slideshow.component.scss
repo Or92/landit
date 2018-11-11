@@ -1,0 +1,20 @@
+.container{
+    overflow: hidden;
+    .wrapper{
+        display: flex;
+        flex-direction: row;
+        transition-delay: 1s;
+        transition-duration: 1s;
+        transition-property: transform;
+        transition-timing-function: ease-in;
+        animation-iteration-count: infinite;
+    }
+    .wrapper > div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+       
+
+
+    }
+}
