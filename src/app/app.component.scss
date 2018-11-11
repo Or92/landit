@@ -136,8 +136,8 @@
     background-color: #F15346;
     border-radius: 14px;
     padding: 0.5rem;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
@@ -147,8 +147,7 @@
     }
   }
 
-.button:hover,
-.button:active {
+.button:hover{
   letter-spacing: 5px;
 }
 

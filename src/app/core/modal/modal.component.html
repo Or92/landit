@@ -1,14 +1,16 @@
-<div class="container">
+<div class="container" [ngStyle]="{'width': width+'px', 'height': height+'px'}">
+  <!-- <div class="wrap"> -->
   <div class="modal">
       <app-success *ngIf="success" [@simpleFadeAnimation]="'in'"></app-success>
     <div class="x" (click)="close()" @simpleFadeAnimation *ngIf="!success">
       <div class="text">X</div>
     </div>
-    <div class="wrapper"><input type="text" placeholder="שם מלא"></div>
-    <div class="wrapper"><input type="text" placeholder="מספר פלאפון"></div>
+    <div class="wrapper"><input #name type="text" placeholder="שם מלא"></div>
+    <div class="wrapper"><input #phone type="text" placeholder="מספר פלאפון"></div>
     <div class="button" @simpleFadeAnimation *ngIf="!success">
       <div class="text" (click)="send()" >שלח</div>
     </div>
   </div>
+<!-- </div> -->
 </div>
 <div class="cover" [ngStyle]="{'width': width+'px', 'height': height+'px'}"></div>

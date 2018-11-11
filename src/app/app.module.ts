@@ -6,6 +6,7 @@ import { ModalComponent } from './core/modal/modal.component';
 import { SuccessComponent } from './core/success/success.component';
 import { SlideshowComponent } from './core/slideshow/slideshow.component';
 import { QuoutesComponent } from './core/quoutes/quoutes.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { QuoutesComponent } from './core/quoutes/quoutes.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
