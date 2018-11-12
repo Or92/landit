@@ -25,11 +25,16 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class AppComponent {
   modalOpen = false;
-
-  openModal(){
+  pos;
+  openModal(e){
     this.modalOpen = true;
+    document.querySelector('body').classList.add('body-overflow-hidden');
+    this.pos = Math.abs(document.querySelector('body').getBoundingClientRect().top) +100;
+    // this.pos = e.pageY;
+    console.log(this.pos);
   }
   closeModal(){
     this.modalOpen = false;
+    document.querySelector('body').classList.remove('body-overflow-hidden');
   }
 }

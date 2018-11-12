@@ -1,5 +1,5 @@
 import { FormService } from './../form.service';
-import { Component, OnInit, Output, EventEmitter, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, AfterViewInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import * as uuid from 'uuid';
 
@@ -29,8 +29,11 @@ import * as uuid from 'uuid';
 export class ModalComponent implements OnInit {
   @ViewChild('phone') phone: ElementRef;
   @ViewChild('name') name: ElementRef;
-
   @Output() exit = new EventEmitter();
+  _pos;
+  @Input() set pos (e){
+    this._pos = e;
+  }
   success = false;
   height;
   width;

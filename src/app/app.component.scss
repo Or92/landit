@@ -35,7 +35,7 @@
 }
 .container{
   direction: rtl;
-  .header{
+  .top-header{
     display: flex;
     justify-content: center;
     // position: absolute;
@@ -56,17 +56,12 @@
     }
   }
   .content{
-    padding: 1rem 0;
     text-align: center;
-    // height: calc(100vh - 12.191582002902758vh);
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    background-image: url('../assets/running2.jpg');
+    background-image: url('/assets/running2.jpg');
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
@@ -187,9 +182,95 @@
 // }
     }
   }
+  
   .footer{}
 }
 
+.content-two{
+  // min-height: 100vh;
+  background-image: url('/assets/icons/whattodo.png');
+  // background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem 0;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  .container{
+    justify-content: center;
+    display: flex;
+    padding: 1rem 3rem;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+    .text-one{
+      opacity: 0.9;
+      background: #41424E;
+      .header{
+        font-size: 21px;
+    padding: 1rem;
+      }
+      .subtitle{
+        font-family: 'OpenSansHebrew-BoldItalic';
+        font-size: 36px;
+        color: #33CBCC;
+    .img{    
+      margin: 4rem 0;
+    img{
+      width: 22rem;
+    }
+    }
+      }
+      
+    }
+  }
+}
+.content-three{
+  background-image: url('../assets/running1.jpg');
+  min-height: 100vh;
+  background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-position: center center;
+    // background-color: gray;
+    padding: 4rem 1rem;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    .how-it-works{
+      padding: 1rem 3rem;
+      background: darkgray;
+      // height: 60vh;
+      opacity: 0.8;
+      .wrapper{
+        padding: 1rem;
+        margin: 1rem 0;
+        border: 1px solid white;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+      }
+      .text{
+        font-family: 'OpenSansHebrew-BoldItalic';
+        padding: 2rem 0;
+        font-size: 26px;
+        color: #F15346;
+        text-align: center;
+      }
+      .img{
+        img{
+          width: 10rem;
+        }
+      }
+    }
+}
 app-modal{
   position: absolute;
     display: block;
