@@ -2,6 +2,7 @@ import { FormService } from './../form.service';
 import { Component, OnInit, Output, EventEmitter, AfterViewInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import * as uuid from 'uuid';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-modal',
@@ -46,19 +47,25 @@ export class ModalComponent implements OnInit {
   ngOnInit() {
   }
   send() {
-    let data: any = {
-      name: this.name.nativeElement.value,
-      phone: this.phone.nativeElement.value,
-    };
-    if (data.name && data.phone && data.phone.length === 10) {
-      data.id = uuid();
-      this.formService.sendFormData(data).subscribe(data => {
-        this.success = true;
-        setTimeout(() => this.exit.emit(), 3000);
-      }, err => {
-        this.success = true;
-        setTimeout(() => this.exit.emit(), 3000);
-      });
+    if(!environment.production){
+      this.success = true;
+      setTimeout(() => {console.log('after');this.exit.emit()}, 3000);
+    }
+    else{
+      let data: any = {
+        name: this.name.nativeElement.value,
+        phone: this.phone.nativeElement.value,
+      };
+      if (data.name && data.phone && data.phone.length === 10) {
+        data.id = uuid();
+        this.formService.sendFormData(data).subscribe(data => {
+          this.success = true;
+          setTimeout(() => this.exit.emit(), 3000);
+        }, err => {
+          this.success = true;
+          setTimeout(() => this.exit.emit(), 3000);
+        });
+      }
     }
   }
   close() {

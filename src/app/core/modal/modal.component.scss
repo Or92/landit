@@ -28,6 +28,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        app-success{
+            position: absolute;
+        }
         .x{
             cursor: pointer;
             display: flex;
@@ -62,6 +65,7 @@ font-family: 'OpenSansHebrew-Regular';
             }
         }
     .button{
+        position: absolute;     
         transition-duration: .1s;
         // box-shadow: 0 2px white;
         cursor: pointer;

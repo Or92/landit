@@ -92,6 +92,17 @@
 
     </div>
   </div>
+  <div class="content-four">
+<img src="assets/icons/animated-red-arrow-down.gif" alt="arrow">
+<div class="wrapper">
+  <input type="text" #name placeholder="שם מלא">
+  <input type="text" #phone placeholder="פלאפון">
+  <div class="button" (click)="send()">
+    שלח
+  </div>
+  <app-success *ngIf="success" [@simpleFadeAnimation]="'in'"></app-success>
+</div>
+  </div>
   <div class="footer"></div>
 </div>
 

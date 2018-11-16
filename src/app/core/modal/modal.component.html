@@ -1,7 +1,7 @@
 <div class="container" [ngStyle]="{'width': width+'px', 'height': height+'px'}">
   <!-- <div class="wrap"> -->
   <div class="modal" [ngStyle]="{'top': _pos+'px'}">
-      <app-success *ngIf="success" [@simpleFadeAnimation]="'in'"></app-success>
+      <app-success *ngIf="success" [@simpleFadeAnimation]="'in'" ></app-success>
     <div class="x" (click)="close()" @simpleFadeAnimation *ngIf="!success">
       <div class="text">X</div>
     </div>
