@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href https://or92.github.io/landit/ --output-path docs && ngh --dir docs/"
+    "deploy": "ng build --prod --base-href https://or92.github.io/landit/ --output-path docs && ngh --dir docs/",
+    "deploy2": "ng build --prod --output-path docs && ngh --dir docs/"
   },
   "private": true,
   "dependencies": {
